@@ -13,6 +13,8 @@ public class VNWindow extends JFrame {
     private JTextArea dialogueArea;
     private JPanel choicePanel;
     private JButton nextButton;
+    private JButton saveButton;
+    private JButton loadButton;
 
     private GameEngine engine;
 
@@ -43,6 +45,16 @@ public class VNWindow extends JFrame {
         choicePanel = new JPanel();
         choicePanel.setBounds(50, 500, 800, 60);
         choicePanel.setLayout(new FlowLayout());
+
+        saveButton = new JButton("Save");
+        saveButton.setBounds(760, 10, 80, 30);
+        saveButton.addActionListener(e -> engine.saveGame());
+        add(saveButton);
+
+        loadButton = new JButton("Load");
+        loadButton.setBounds(670, 10, 80, 30);
+        loadButton.addActionListener(e -> engine.loadGame());
+        add(loadButton);
 
         add(backgroundLabel);
         add(characterLabel);
