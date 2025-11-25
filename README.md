@@ -1,6 +1,12 @@
 # FINALPROJ_VisualNovel
 Java and OOP Centered visual novel game.
 
+## App Name
+Monochromatic
+
+## App Description
+A short visual novel game that brings the player to a white void with only one other person to interact with. Depending on the player's choices, different endings will correspond to a specific ending.
+
 ## Main Features:
 1. Scene Rendering - Shows graphics: background, characters, and dialogue
 2. Dialogue System - Allows continuation to the next scene with the press of a button
@@ -11,3 +17,4 @@ Java and OOP Centered visual novel game.
 ## Tech Used:
 1. Java - main coding language
 2. JavaSwing - for GUI
+3. VSCode - IDE
