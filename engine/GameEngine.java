@@ -53,4 +53,15 @@ public class GameEngine {
         currentSceneId = choice.getNextSceneId();
         loadScene(currentSceneId);
     }
+
+    public void saveGame() {
+        SaveManager.save(currentSceneId);
+    }
+
+    public void loadGame() {
+        String saved = SaveManager.load();
+        if (saved != null){
+            loadScene(saved);
+        }
+    }
 }
