@@ -21,7 +21,7 @@ public class VNWindow extends JFrame {
     public VNWindow() {
         engine = new GameEngine(this);
 
-        setTitle("Visual Novel Game");
+        setTitle("Monochromatic");
         setSize(900, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
