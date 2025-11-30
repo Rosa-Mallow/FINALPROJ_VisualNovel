@@ -1,0 +1,117 @@
+[prologue]
+type=dialogue
+character=neutral.png
+text=<html>...Hello? Another soul wandering the <i>white void</i>?</html>
+next=prologue2
+
+[prologue2]
+type=dialogue
+character=happy.png
+text=<html>Ah, don't panic. You're not dead... probably. I'm Prometheus.</html>
+next=player_intro
+
+[player_intro]
+type=dialogue
+character=neutral.png
+text=<html>Who are you? Where am I?</html>
+next=prometheus_explain1
+
+[prometheus_explain1]
+type=dialogue
+character=neutral.png
+text=<html>This place... It's where the lost drift. I've been here a long time.</html>
+next=prometheus_explain2
+
+[prometheus_explain2]
+type=dialogue
+character=sad.png
+text=<html>I’ve seen countless wanderers come and go... Though most don’t last long.</html>
+next=player_choice_intro
+
+[player_choice_intro]
+type=choice
+character=neutral.png
+text=<html>But you... You're different. You’re still asking questions.</html>
+choice=Be gentle and gain his trust->friendly_path
+choice=Be rude and hostile->hostile_path
+next=
+
+############################################
+# FRIENDLY PATH
+############################################
+
+[friendly_path]
+type=dialogue
+character=neutral.png
+text=<html>I wasn’t trying to be rude. I just… really want to get out of here.</html>
+next=friendly1
+
+[friendly1]
+type=dialogue
+character=sad.png
+text=<html>I understand. I once wanted the same.</html>
+next=friendly2
+
+[friendly2]
+type=dialogue
+character=happy.png
+text=<html>But maybe... maybe helping you will help me too.</html>
+next=friendly3
+
+[friendly3]
+type=dialogue
+character=neutral.png
+text=<html>There <i>is</i> a way out. But I never had a reason to try it.</html>
+next=friendly_final
+
+[friendly_final]
+type=dialogue
+character=happy.png
+text=<html>Come. I’ll show you the path I never walked.</html>
+next=ending_good
+
+[ending_good]
+type=dialogue
+character=happy.png
+text=<html><b>GOOD ENDING:</b> Prometheus guides you toward escape.</html>
+next=
+
+############################################
+# HOSTILE PATH
+############################################
+
+[hostile_path]
+type=dialogue
+character=neutral.png
+text=<html>I don’t care who you are. Just tell me how to get out.</html>
+next=hostile1
+
+[hostile1]
+type=dialogue
+character=angry.png
+text=<html>...You demand answers from a man trapped here for centuries?</html>
+next=hostile2
+
+[hostile2]
+type=dialogue
+character=angry.png
+text=<html>Most people who end up here are frightened. But you—you're <i>ungrateful</i>.</html>
+next=hostile3
+
+[hostile3]
+type=dialogue
+character=sad.png
+text=<html>If you speak with cruelty now... how will you act once you're free?</html>
+next=hostile_final
+
+[hostile_final]
+type=dialogue
+character=neutral.png
+text=<html>No. I won’t help you. Find your own way out—if there even is one.</html>
+next=ending_bad
+
+[ending_bad]
+type=dialogue
+character=neutral.png
+text=<html><b>BAD ENDING:</b> Prometheus abandons you in the void.</html>
+next=
