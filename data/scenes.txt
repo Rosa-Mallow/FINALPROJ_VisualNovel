@@ -1,37 +1,36 @@
 [scene1]
 type=dialogue
-character=images/neutral.png
-text=<html>...Hello? Another soul wandering the <i>white void</i>?</html>
+text=...Hello? Another soul wandering the <i>white void</i>?
 next=prologue2
 
 [prologue2]
 type=dialogue
 character=images/happy.png
-text=<html>Ah, don't panic. You're not dead... probably. I'm Prometheus.</html>
+text=Ah, don't panic. You're not dead... probably. I'm Prometheus.
 next=player_intro
 
 [player_intro]
 type=dialogue
 character=images/neutral.png
-text=<html>Who are you? Where am I?</html>
+text=<u>Who are you? Where am I?</u>
 next=prometheus_explain1
 
 [prometheus_explain1]
 type=dialogue
 character=images/neutral.png
-text=<html>This place... It's where the lost drift. I've been here a long time.</html>
+text=This place... It's where the lost drift. I've been here a long time.
 next=prometheus_explain2
 
 [prometheus_explain2]
 type=dialogue
 character=images/sad.png
-text=<html>I’ve seen countless wanderers come and go... Though most don’t last long.</html>
+text=I've seen countless wanderers come and go... Though most don't last long.
 next=player_choice_intro
 
 [player_choice_intro]
 type=choice
 character=images/neutral.png
-text=<html>But you... You're different. You’re still asking questions.</html>
+text=But you... You're different. You're still asking questions.
 choice=Be gentle and gain his trust->friendly_path
 choice=Be rude and hostile->hostile_path
 next=
@@ -43,37 +42,37 @@ next=
 [friendly_path]
 type=dialogue
 character=images/neutral.png
-text=<html>I wasn’t trying to be rude. I just… really want to get out of here.</html>
+text=<u>I wasn't trying to be rude. I just... really want to get out of here.</u>
 next=friendly1
 
 [friendly1]
 type=dialogue
 character=images/sad.png
-text=<html>I understand. I once wanted the same.</html>
+text=I understand. I once wanted the same.
 next=friendly2
 
 [friendly2]
 type=dialogue
 character=images/happy.png
-text=<html>But maybe... maybe helping you will help me too.</html>
+text=But maybe... maybe helping you will help me too.
 next=friendly3
 
 [friendly3]
 type=dialogue
 character=images/neutral.png
-text=<html>There <i>is</i> a way out. But I never had a reason to try it.</html>
+text=There <i>is</i> a way out. But I never had a reason to try it.
 next=friendly_final
 
 [friendly_final]
 type=dialogue
 character=images/happy.png
-text=<html>Come. I’ll show you the path I never walked.</html>
+text=Come. I'll show you the path I never walked.
 next=ending_good
 
 [ending_good]
 type=dialogue
 character=images/happy.png
-text=<html><b>GOOD ENDING:</b> Prometheus guides you toward escape.</html>
+text=<b>GOOD ENDING:</b> Prometheus guides you toward escape.
 next=
 
 ############################################
@@ -83,35 +82,40 @@ next=
 [hostile_path]
 type=dialogue
 character=images/neutral.png
-text=<html>I don’t care who you are. Just tell me how to get out.</html>
+text=<u>I don't care who you are. Just tell me how to get out.</u>
 next=hostile1
 
 [hostile1]
 type=dialogue
 character=images/angry.png
-text=<html>...You demand answers from a man trapped here for centuries?</html>
+text=...You demand answers from a man trapped here for centuries?
 next=hostile2
 
 [hostile2]
 type=dialogue
 character=images/angry.png
-text=<html>Most people who end up here are frightened. But you—you're <i>ungrateful</i>.</html>
+text=Most people who end up here are frightened. But you- you're <i>ungrateful</i>.
 next=hostile3
 
 [hostile3]
 type=dialogue
 character=images/sad.png
-text=<html>If you speak with cruelty now... how will you act once you're free?</html>
+text=If you speak with cruelty now... how will you act once you're free?
 next=hostile_final
 
 [hostile_final]
 type=dialogue
 character=images/angry.png
-text=<html>No. I won’t help you. Find your own way out—if there even is one.</html>
+text=No. I won't help you. Find your own way out- if there even is one.
 next=ending_bad
 
 [ending_bad]
 type=dialogue
 character=images/angry.png
-text=<html><b>BAD ENDING:</b> Prometheus abandons you in the void.</html>
+text=<b>BAD ENDING:</b> Prometheus abandons you in the void.
+next=jumpscare
+
+[jumpscare]
+type=dialogue
+character=images/what.png
 next=

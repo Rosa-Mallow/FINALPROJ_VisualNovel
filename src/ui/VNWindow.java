@@ -10,7 +10,7 @@ public class VNWindow extends JFrame {
 
     private JLabel backgroundLabel;
     private JLabel characterLabel;
-    private JTextArea dialogueArea;
+    private JLabel dialogueArea;
     private JPanel choicePanel;
     private JButton nextButton;
     private JButton saveButton;
@@ -42,25 +42,29 @@ public class VNWindow extends JFrame {
         layeredPane.add(characterLabel, Integer.valueOf(1));
 
         // Dialogue Box (top layer)
-        dialogueArea = new JTextArea();
-        dialogueArea.setBounds(50, 370, 700, 120);
-        dialogueArea.setLineWrap(true);
-        dialogueArea.setWrapStyleWord(true);
-        dialogueArea.setEditable(false);
-        layeredPane.add(dialogueArea, Integer.valueOf(2));
+        JPanel dialoguePanel = new JPanel();
+        dialoguePanel.setBounds(50, 360, 800, 150);
+        dialoguePanel.setBackground(new Color(165, 135, 255, 100));  // semi-transparent
+        dialoguePanel.setOpaque(true);
+        dialoguePanel.setLayout(new BorderLayout());
+        dialogueArea = new JLabel();
+        dialogueArea.setVerticalAlignment(SwingConstants.TOP);
+        dialoguePanel.add(dialogueArea);
+        layeredPane.add(dialoguePanel, Integer.valueOf(2));
+
 
         // Choices (same front layer)
         choicePanel = new JPanel();
         choicePanel.setBounds(50, 500, 800, 60);
         choicePanel.setOpaque(false); // transparent background
         choicePanel.setLayout(new FlowLayout());
-        layeredPane.add(choicePanel, Integer.valueOf(2));
+        layeredPane.add(choicePanel, Integer.valueOf(3));
 
         // Next Button (top layer)
         nextButton = new JButton("Next");
         nextButton.setBounds(760, 450, 80, 40);
         nextButton.addActionListener(e -> engine.next());
-        layeredPane.add(nextButton, Integer.valueOf(2));
+        layeredPane.add(nextButton, Integer.valueOf(3));
 
         saveButton = new JButton("Save");
         saveButton.setBounds(760, 10, 80, 30);
@@ -94,7 +98,7 @@ public class VNWindow extends JFrame {
     }
 
     public void setDialogueText(String text) {
-        dialogueArea.setText(text);
+        dialogueArea.setText("<html><div style='width:650px; font-size:12px; color:black; text-align:center; padding:50px;'>" + text + "</div></html>");
     }
 
     public void showChoices(List<Choice> choices) {

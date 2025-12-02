@@ -21,6 +21,8 @@ public class GameEngine {
     }
 
     public void loadScene(String id) {
+        currentSceneId = id;
+
         Scene scene = scenes.get(id);
         if (scene == null) return;
 
@@ -35,6 +37,7 @@ public class GameEngine {
             DialogueScene ds = (DialogueScene) scene;
             ui.hideChoices();
             ui.setDialogueText(ds.getDialogue());
+            
         }
     }
 
