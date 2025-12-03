@@ -1,4 +1,5 @@
 # FINALPROJ_VisualNovel
+Submitted by: Emily Rose D. Escartin
 Java and OOP Centered visual novel game.
 
 ## App Name
