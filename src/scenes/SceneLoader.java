@@ -14,7 +14,7 @@ public class SceneLoader {
 
             String id = "";
             String type = "";
-            String bg = "";
+            String bg = "images/background.jpg";
             String chara = "";
             String text = "";
             String next = "";
@@ -35,7 +35,6 @@ public class SceneLoader {
                     // Reset for new scene
                     id = line.substring(1, line.length() - 1);
                     type = "";
-                    bg = "";
                     chara = "";
                     text = "";
                     next = "";
